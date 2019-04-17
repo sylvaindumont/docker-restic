@@ -16,6 +16,12 @@ RUN set -ex \
     && mv /tmp/restic /usr/bin/restic \
     && chmod +x /usr/bin/restic \
 \
+    && curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip \
+    && unzip rclone-current-linux-amd64.zip \
+    && cd rclone-*-linux-amd64 \
+    && sudo mv rclone /usr/bin/ \
+    && sudo chmod +x /usr/bin/rclone \
+\
     && apk del --no-progress \
            BUILD_DEPS \
     && rm -f -r \
