@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV RESTIC_VERSION=0.11.0
+ENV RESTIC_VERSION=0.12.0
 
 RUN set -ex \
     && apk add --no-cache --no-progress --virtual BUILD_DEPS \
